@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J Harmony | Anti-Aging, Aesthetics, Wellness — A Proactive Medical Care Club</title>
+<meta name="description" content="J Harmony is a proactive medical care club. One annual membership unites concierge care, hormone optimization, medical aesthetics, anti-aging solutions, and full analytics of your well-being.">
+<meta property="og:title" content="J Harmony — A Proactive Medical Care Club">
+<meta property="og:description" content="Anti-aging, aesthetics, wellness. One annual membership. Concierge medical, longevity, proactive health monitoring, hormone replacement therapy, and aesthetics.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://j-harmony.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121110'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23C9A96A' text-anchor='middle'%3EJH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:      #121110;   /* page background — deep espresso */
+    --panel:    #1B1916;   /* raised surface */
+    --gold:     #C9A96A;   /* champagne gold accent */
+    --gold-dim: #8F7A4E;
+    --ivory:    #EFE9DD;   /* primary text */
+    --stone:    #9C9484;   /* secondary text */
+    --hairline: rgba(201,169,106,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--ivory);
+    font-family:'Jost',system-ui,sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold);color:var(--ink)}
+
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400}
+
+  .eyebrow{
+    font-family:'Jost',sans-serif;
+    font-size:.72rem;
+    letter-spacing:.42em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:400;
+  }
+  .rule{
+    width:64px;height:1px;border:none;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    margin:1.6rem auto;
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.1rem clamp(1.25rem,5vw,3.5rem);
+    background:linear-gradient(180deg,rgba(18,17,16,.92),rgba(18,17,16,.75));
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(201,169,106,.14);
+  }
+  .brand{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.25rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--ivory);text-decoration:none;white-space:nowrap;
+  }
+  .brand span{color:var(--gold)}
+  nav{display:flex;gap:clamp(1rem,3vw,2.4rem)}
+  nav a{
+    color:var(--stone);text-decoration:none;
+    font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;
+    transition:color .25s ease;
+  }
+  nav a:hover,nav a:focus-visible{color:var(--gold)}
+  a:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+  .nav-toggle{display:none}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;
+    padding:7rem 1.5rem 4rem;
+    position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 70% 45% at 50% 108%, rgba(201,169,106,.14), transparent 65%),
+      radial-gradient(ellipse 55% 35% at 50% -8%,  rgba(201,169,106,.07), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-mark{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1rem,2vw,1.2rem);
+    letter-spacing:.6em;color:var(--gold);
+    margin-bottom:2.2rem;
+  }
+  .hero h1{
+    font-size:clamp(3.2rem,9vw,6.8rem);
+    font-weight:300;
+    letter-spacing:.14em;
+    line-height:1.05;
+    text-transform:uppercase;
+  }
+  .hero .sub{
+    margin-top:2rem;
+    font-size:clamp(.8rem,1.6vw,1rem);
+    letter-spacing:.5em;text-transform:uppercase;color:var(--stone);
+  }
+  .hero .club{
+    margin-top:.9rem;
+    font-size:clamp(.72rem,1.4vw,.86rem);
+    letter-spacing:.44em;text-transform:uppercase;color:var(--gold);
+  }
+  .hero-cta{
+    margin-top:3.2rem;
+    display:inline-block;
+    padding:.95rem 2.6rem;
+    border:1px solid var(--gold);
+    color:var(--gold);text-decoration:none;
+    font-size:.74rem;letter-spacing:.34em;text-transform:uppercase;
+    transition:background .3s ease,color .3s ease;
+  }
+  .hero-cta:hover,.hero-cta:focus-visible{background:var(--gold);color:var(--ink)}
+
+  section{padding:clamp(4.5rem,10vw,7.5rem) clamp(1.5rem,6vw,4rem);position:relative}
+  .measure{max-width:820px;margin:0 auto;text-align:center}
+
+  /* ---------- Health Reimagined ---------- */
+  .reimagined{border-top:1px solid rgba(201,169,106,.12)}
+  .ghost-letters{
+    position:absolute;inset:0;overflow:hidden;pointer-events:none;
+  }
+  .ghost-letters span{
+    position:absolute;top:50%;transform:translateY(-50%);
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(14rem,30vw,26rem);
+    line-height:1;color:transparent;
+    -webkit-text-stroke:1px rgba(201,169,106,.13);
+  }
+  .ghost-letters .gj{left:-.06em}
+  .ghost-letters .gh{right:-.06em}
+  .reimagined h2{
+    font-size:clamp(2.4rem,6vw,4.2rem);
+    letter-spacing:.1em;text-transform:uppercase;font-weight:300;line-height:1.15;
+  }
+  .reimagined h2 em{font-style:italic;color:var(--gold);font-weight:400;text-transform:none;letter-spacing:.02em}
+  .reimagined p{margin-top:2rem;color:var(--stone);font-size:1.06rem}
+
+  /* ---------- Pillars ---------- */
+  .pillars{padding-top:0}
+  .pillar-list{
+    max-width:900px;margin:0 auto;
+    border-top:1px solid var(--hairline);
+  }
+  .pillar{
+    display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;
+    padding:1.9rem .5rem;
+    border-bottom:1px solid var(--hairline);
+  }
+  .pillar h3{
+    font-size:clamp(1.5rem,3.4vw,2.2rem);
+    letter-spacing:.06em;font-weight:400;
+  }
+  .pillar p{
+    color:var(--stone);font-size:.92rem;max-width:46%;text-align:right;
+  }
+
+  /* ---------- Membership ---------- */
+  .membership{background:var(--panel)}
+  .membership h2{
+    font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.06em;font-weight:400;
+  }
+  .membership p{margin-top:1.8rem;color:var(--stone);font-size:1.08rem}
+  .membership p strong{color:var(--ivory);font-weight:400}
+
+  /* ---------- Reviews ---------- */
+  .reviews-grid{
+    max-width:1000px;margin:3.5rem auto 0;
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);
+  }
+  .review{
+    border:1px solid var(--hairline);
+    padding:2.6rem 2.2rem 2rem;position:relative;
+    background:linear-gradient(180deg,rgba(201,169,106,.05),transparent 55%);
+  }
+  .review::before{
+    content:"\201C";
+    font-family:'Cormorant Garamond',serif;
+    font-size:4.5rem;line-height:0;
+    color:var(--gold);
+    position:absolute;top:2.4rem;left:1.9rem;opacity:.85;
+  }
+  .review blockquote{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.3rem;line-height:1.55;font-weight:400;
+    padding-top:1.4rem;
+  }
+  .review cite{
+    display:block;margin-top:1.6rem;font-style:normal;
+    font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
+  }
+  .promise{
+    max-width:760px;margin:4.5rem auto 0;text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.3rem,3vw,1.7rem);font-style:italic;color:var(--ivory);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--panel);border-top:1px solid rgba(201,169,106,.12)}
+  .contact-grid{
+    max-width:1000px;margin:3.5rem auto 0;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;text-align:center;
+  }
+  .contact-item .label{
+    font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+    margin-bottom:.9rem;
+  }
+  .contact-item a{color:var(--ivory);text-decoration:none;transition:color .25s ease}
+  .contact-item a:hover,.contact-item a:focus-visible{color:var(--gold)}
+  .contact-item p,.contact-item address{font-style:normal;color:var(--stone);font-size:.98rem}
+  .contact-item address + address{margin-top:1rem}
+
+  footer{
+    padding:2.2rem 1.5rem;text-align:center;
+    border-top:1px solid rgba(201,169,106,.12);
+    color:var(--stone);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
+  }
+  footer .fbrand{font-family:'Cormorant Garamond',serif;color:var(--gold);letter-spacing:.34em;margin-bottom:.5rem}
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:760px){
+    nav{display:none}
+    .nav-toggle{
+      display:block;background:none;border:1px solid var(--hairline);
+      color:var(--gold);padding:.45rem .8rem;font-size:.7rem;
+      letter-spacing:.24em;text-transform:uppercase;cursor:pointer;
+      font-family:'Jost',sans-serif;
+    }
+    nav.open{
+      display:flex;flex-direction:column;position:absolute;top:100%;right:0;left:0;
+      background:rgba(18,17,16,.97);padding:1.4rem 2rem;gap:1.1rem;
+      border-bottom:1px solid var(--hairline);
+    }
+    .pillar{flex-direction:column;align-items:flex-start;gap:.5rem}
+    .pillar p{max-width:100%;text-align:left}
+    .reviews-grid,.contact-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#top">J <span>Harmony</span></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mainnav" onclick="const n=document.getElementById('mainnav');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+  <nav id="mainnav">
+    <a href="#membership">Membership</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="hero-mark">J &nbsp;·&nbsp; H</p>
+    <h1>J Harmony</h1>
+    <hr class="rule">
+    <p class="sub">Anti-Aging &nbsp; Aesthetics &nbsp; Wellness</p>
+    <p class="club">A Proactive Medical Care Club</p>
+    <a class="hero-cta" href="#contact">Inquire About Membership</a>
+  </div>
+
+  <!-- Health Reimagined -->
+  <section class="reimagined" id="membership">
+    <div class="ghost-letters" aria-hidden="true"><span class="gj">J</span><span class="gh">H</span></div>
+    <div class="measure reveal">
+      <p class="eyebrow">One Annual Membership</p>
+      <hr class="rule">
+      <h2>Health <em>Reimagined</em></h2>
+      <p>One annual membership unites concierge care, hormone optimization, medical aesthetics, anti-aging solutions, and full analytics of your well-being at every point. As a member, you will be provided with wearable insights that deliver live, proactive, and personalized longevity status updates in a personalized dashboard.</p>
+    </div>
+  </section>
+
+  <!-- Services / Pillars -->
+  <section class="pillars" id="services">
+    <div class="measure reveal" style="margin-bottom:3rem">
+      <p class="eyebrow">Member Services</p>
+      <hr class="rule">
+    </div>
+    <div class="pillar-list">
+      <div class="pillar reveal">
+        <h3>Concierge Medical</h3>
+        <p>Personal, direct access to your care team — no waiting rooms, no friction.</p>
+      </div>
+      <div class="pillar reveal">
+        <h3>Longevity</h3>
+        <p>Anti-aging solutions built on cutting-edge science and real results.</p>
+      </div>
+      <div class="pillar reveal">
+        <h3>Proactive Health Monitoring</h3>
+        <p>Wearable insights and full analytics of your well-being at every point.</p>
+      </div>
+      <div class="pillar reveal">
+        <h3>Hormone Replacement Therapy</h3>
+        <p>Hormone optimization, personalized and continuously monitored.</p>
+      </div>
+      <div class="pillar reveal">
+        <h3>Aesthetics</h3>
+        <p>Elite medical aesthetics with your well-being as the prime focus.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership vision -->
+  <section class="membership">
+    <div class="measure reveal">
+      <p class="eyebrow">All-Inclusive Club Membership</p>
+      <hr class="rule">
+      <h2 class="serif">Full control, returned to you.</h2>
+      <p>At J Harmony, our vision is to <strong>dismantle the friction of modern healthcare</strong> and return full control to you. No more waiting rooms or systems that treat care like an inconvenience. As a medical club member, you are entitled to personal, proactive medical care, assessments, monitoring, and aesthetics treatments — with anti-aging and your well-being as the prime focus.</p>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="measure reveal">
+      <p class="eyebrow">Customer Reviews</p>
+      <hr class="rule">
+    </div>
+    <div class="reviews-grid">
+      <div class="review reveal">
+        <blockquote>I've always dreamed of a one-stop healthcare solution where I call the shots... and I found it at J Harmony. I didn't just sign up; I built exactly what I wanted!</blockquote>
+        <cite>— Jason, Cerritos</cite>
+      </div>
+      <div class="review reveal">
+        <blockquote>I've poured a fortune into my health and beauty over the years... until J Harmony finally put it all under one roof. One service. One vision. Total control. This is the future I've been waiting for.</blockquote>
+        <cite>— Jane, Cerritos</cite>
+      </div>
+    </div>
+    <p class="promise reveal">Delivering elite anti-aging, aesthetics, wellness, and proactive care — powered by cutting-edge science, unmatched service, and real results.</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="measure reveal">
+      <p class="eyebrow">Contact Us</p>
+      <hr class="rule">
+      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem)">Begin your membership conversation.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item reveal">
+        <p class="label">Email Address</p>
+        <p><a href="mailto:info@J-Harmony.com">info@J-Harmony.com</a></p>
+      </div>
+      <div class="contact-item reveal">
+        <p class="label">Phone Number</p>
+        <p><a href="tel:+17149834298">(714) 983-4298</a></p>
+      </div>
+      <div class="contact-item reveal">
+        <p class="label">Headquarters</p>
+        <address>6061 Dale St, Ste C<br>Buena Park, CA 90621</address>
+      </div>
+      <div class="contact-item reveal">
+        <p class="label">Treatment Location</p>
+        <address>433 N Camden Dr, Ste 610<br>Beverly Hills, CA 90210</address>
+      </div>
+      <div class="contact-item reveal">
+        <p class="label">Treatment Location</p>
+        <address>11620 Wilshire Blvd<br>Los Angeles, CA 90025</address>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p class="fbrand">J Harmony</p>
+  <p>&copy; <span id="yr"></span> J Harmony. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
