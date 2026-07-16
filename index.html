@@ -168,6 +168,38 @@
     color:var(--stone);font-size:.92rem;max-width:46%;text-align:right;
   }
 
+  /* ---------- Results ---------- */
+  .results-wrap{max-width:1000px;margin:0 auto}
+  .case-block{margin-top:3.5rem}
+  .case-block:first-of-type{margin-top:3rem}
+  .case-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.5rem,3.2vw,2.1rem);
+    letter-spacing:.06em;font-weight:400;text-align:center;
+  }
+  .case-note{
+    text-align:center;color:var(--stone);font-size:.92rem;
+    max-width:560px;margin:.7rem auto 0;
+  }
+  .ba-pair{
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,1.8rem);
+    margin-top:2rem;
+  }
+  .ba-fig{position:relative;border:1px solid var(--hairline);padding:.6rem;background:linear-gradient(180deg,rgba(201,169,106,.05),transparent 60%)}
+  .ba-fig img{display:block;width:100%;height:auto}
+  .ba-tag{
+    position:absolute;top:1.25rem;left:1.25rem;
+    font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--gold);background:rgba(18,17,16,.78);
+    padding:.4rem .8rem .35rem .95rem;
+    border:1px solid var(--hairline);
+  }
+  .results-disclaimer{
+    margin:3.2rem auto 0;text-align:center;max-width:640px;
+    color:var(--stone);font-size:.8rem;letter-spacing:.06em;
+  }
+  @media (max-width:640px){.ba-pair{grid-template-columns:1fr}}
+
   /* ---------- Membership ---------- */
   .membership{background:var(--panel)}
   .membership h2{
@@ -266,6 +298,7 @@
   <nav id="mainnav">
     <a href="#membership">Membership</a>
     <a href="#services">Services</a>
+    <a href="#results">Results</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -331,6 +364,49 @@
       <hr class="rule">
       <h2 class="serif">Full control, returned to you.</h2>
       <p>At J Harmony, our vision is to <strong>dismantle the friction of modern healthcare</strong> and return full control to you. No more waiting rooms or systems that treat care like an inconvenience. As a medical club member, you are entitled to personal, proactive medical care, assessments, monitoring, and aesthetics treatments — with anti-aging and your well-being as the prime focus.</p>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results">
+    <div class="measure reveal">
+      <p class="eyebrow">Member Results</p>
+      <hr class="rule">
+      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem)">Real members. Real results.</h2>
+    </div>
+    <div class="results-wrap">
+
+      <div class="case-block reveal">
+        <h3 class="case-title">Medical Weight Loss</h3>
+        <p class="case-note">−35 lbs in 90 days under physician-guided care.</p>
+        <div class="ba-pair">
+          <figure class="ba-fig">
+            <span class="ba-tag">Before</span>
+            <img src="assets/wl-before.jpg" alt="Member before physician-guided weight loss program" loading="lazy">
+          </figure>
+          <figure class="ba-fig">
+            <span class="ba-tag">After · 90 Days</span>
+            <img src="assets/wl-after.jpg" alt="Member after losing 35 pounds in 90 days" loading="lazy">
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-block reveal">
+        <h3 class="case-title">Alma Hybrid Fractional CO<sub>2</sub> Laser Skin Resurfacing</h3>
+        <p class="case-note">Shown 60 days after two treatments. Final results typically continue developing over 3–6 months.</p>
+        <div class="ba-pair">
+          <figure class="ba-fig">
+            <span class="ba-tag">Before</span>
+            <img src="assets/co2-before.jpg" alt="Skin before Alma Hybrid fractional CO2 laser resurfacing" loading="lazy">
+          </figure>
+          <figure class="ba-fig">
+            <span class="ba-tag">After · 60 Days</span>
+            <img src="assets/co2-after.jpg" alt="Skin 60 days after two Alma Hybrid fractional CO2 laser treatments" loading="lazy">
+          </figure>
+        </div>
+      </div>
+
+      <p class="results-disclaimer reveal">Results shown are actual J Harmony members. Individual results may vary.</p>
     </div>
   </section>
 
